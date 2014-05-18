@@ -54,7 +54,11 @@ module.exports = (grunt) ->
 					'test/**/*.test.coffee'
 				]
 	
-	grunt.registerTask 'default', ['lint', 'test', 'build']
+	grunt.registerTask 'default', [
+		'lint'
+		'test'
+		'build'
+	]
 
 	grunt.registerTask 'lint', ['coffeelint']
 	grunt.registerTask 'test', ['mochaTest:generators']

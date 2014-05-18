@@ -2,7 +2,9 @@ path = require 'path'
 helpers = require('yeoman-generator').test
 
 describe 'webapp-generic generator', ->
-	beforeEach (done) ->
+	origCwd = process.cwd()
+
+	before (done) ->
 		helpers.testDirectory path.join(__dirname, 'temp'), (err) =>
 			if err
 				return done(err)
@@ -12,6 +14,9 @@ describe 'webapp-generic generator', ->
 			]
 
 			done()
+
+	after ->
+		process.chdir origCwd
 
 	it 'creates expected files', (done) ->
 		expected = [
