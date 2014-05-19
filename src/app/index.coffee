@@ -1,5 +1,6 @@
 path = require 'path'
 yeoman = require 'yeoman-generator'
+npm = require 'npm'
 
 module.exports = class WebappGenericGenerator extends yeoman.generators.Base
 	constructor: (args, options, config) ->
@@ -10,6 +11,11 @@ module.exports = class WebappGenericGenerator extends yeoman.generators.Base
 
 		@pkg = JSON.parse @readFileAsString path.join __dirname, '../../package.json'
 
+	loadNpm: ->
+		done = @async()
+
+		npm.load (err, @npm) => done err
+
 	askFor: ->
 		done = @async()
 
@@ -17,10 +23,28 @@ module.exports = class WebappGenericGenerator extends yeoman.generators.Base
 		console.log @yeoman
 
 		prompts = [
-			type: 'confirm'
-			name: 'someOption'
-			message: 'Would you like to enable this option? This is just a test'
-			default: true
+			{
+				name: 'webappName'
+				message: 'What should your web app be called?'
+				default: path.basename(process.cwd())
+			}
+			{
+				name: 'desc'
+				message: 'Describe the web app!'
+				default: 'Reticulate splines using ducks!'
+			}
+			{
+				type: 'input'
+				name: 'author'
+				message: 'Who is the author?'
+				default: this.npm.config.get('init.author.name')
+			}
+			{
+				type: 'confirm'
+				name: 'checkinCompiled'
+				message: 'Should the compiled JS output be checked in to git as well?'
+				default: false
+			}
 		]
 
 		@prompt prompts, (props) =>
@@ -28,8 +52,8 @@ module.exports = class WebappGenericGenerator extends yeoman.generators.Base
 			done()
 
 	app: ->
-		@mkdir 'app'
-		@mkdir 'app/templates'
-		@copy '_package.json', 'package.json'
-		@copy '_bower.json', 'bower.json'
-		@copy 'hurr.coffee', 'hurr.coffee'
+		# @mkdir 'app'
+		# @mkdir 'app/templates'
+		# @copy '_package.json', 'package.json'
+		# @copy '_bower.json', 'bower.json'
+		# @copy 'hurr.coffee', 'hurr.coffee'
