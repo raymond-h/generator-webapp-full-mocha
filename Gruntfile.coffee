@@ -4,7 +4,7 @@ module.exports = (grunt) ->
 	
 	grunt.initConfig
 		clean:
-			app: ['lib/**/*']
+			app: ['generators/**/*']
 
 		copy:
 			templates:
@@ -12,7 +12,7 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: 'src/'
 					src: ['*/templates/**']
-					dest: 'lib/'
+					dest: 'generators/'
 				}]
 
 		coffee:
@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 						expand: yes
 						cwd: 'src/'
 						src: ['**/*.coffee', '!*/templates/**']
-						dest: 'lib/'
+						dest: 'generators/'
 						ext: '.js'
 					}
 				]
