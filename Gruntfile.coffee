@@ -52,6 +52,7 @@ module.exports = (grunt) ->
 			generators:
 				src: [
 					'test/**/*.test.coffee'
+					'!test/temp/**/*'
 				]
 	
 	grunt.registerTask 'default', [
