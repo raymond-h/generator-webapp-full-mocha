@@ -53,15 +53,14 @@ module.exports = class WebappGenericGenerator extends yeoman.generators.Base
 
 	app: ->
 		done = @async()
-		walk = require 'walk'
 
 		folder = path.join __dirname, 'templates'
-		walker = walk.walk folder
+		walker = (require 'walk').walk folder
 
 		walker.on 'directories', (root, dirStats, next) =>
 			root = path.relative folder, root
 			dirs = dirStats.map (d) -> path.join root, d.name
-			
+
 			@mkdir dir for dir in dirs
 
 			next()
