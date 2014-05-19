@@ -1,6 +1,16 @@
 {
-  "name": "package",
+  "name": "<%= webappName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "authors": [
+    "<%= author %>"
+  ],
+  "description": "<%= desc %>",
+  "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "~1.2.16"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "angular": "~1.2.16"
+  }
 }
-

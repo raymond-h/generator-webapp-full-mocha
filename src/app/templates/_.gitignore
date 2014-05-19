@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+
+<% if(!checkinCompiled) { %>
+built-app/
+lib/
+<% } %>
+
+*.log

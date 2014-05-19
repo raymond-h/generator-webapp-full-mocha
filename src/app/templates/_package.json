@@ -1,5 +1,52 @@
 {
-  "name": "package",
+  "name": "<%= webappName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "description": "<%= desc %>",
+  "main": "lib/main.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node .",
+    "test": "grunt test",
+    "webdriver": "phantomjs --webdriver=9515"
+  },
+  "keywords": [
+  ],
+  "author": "<%= author %>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "*",
+    "grunt": "^0.4.4",
+    "load-grunt-tasks": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-coffeelint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-mocha-test": "^0.10.2",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-protractor-runner": "^0.2.4",
+    "chai": "^1.9.1",
+    "chai-as-promised": "^4.1.1",
+    "phantom": "^0.6.1",
+    "grunt-karma": "^0.8.3",
+    "karma": "^0.12.16",
+    "karma-mocha": "^0.1.3",
+    "karma-chai": "^0.1.0",
+    "karma-webdriver-launcher": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-spec-reporter": "0.0.12",
+    "karma-chai-plugins": "^0.2.1",
+    "grunt-execute": "^0.2.1",
+    "grunt-concurrent": "^0.5.0"
+  },
+  "dependencies": {
+    "express": "*",
+    "underscore": "*",
+    "underscore.string": "*",
+    "request": "*",
+    "serve-favicon": "^2.0.0",
+    "morgan": "^1.0.1",
+    "serve-static": "^1.1.0"
+  }
 }
