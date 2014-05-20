@@ -22,7 +22,8 @@
     "url": "git://github.com/raymond-h/generator-webapp-full-mocha.git"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt lint test build"
   },
   "dependencies": {
     "yeoman-generator": "~0.13.0",
