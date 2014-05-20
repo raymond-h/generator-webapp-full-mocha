@@ -1,14 +1,16 @@
 {
-  "name": "generator-webapp-generic",
+  "name": "generator-webapp-full-mocha",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "A generator for Yeoman, with Mocha, Chai + Chai as Promised for server unit, client unit and e2e tests",
   "keywords": [
     "yeoman-generator",
     "coffeescript",
-    "grunt"
+    "grunt",
+    "mocha",
+    "protractor"
   ],
-  "homepage": "https://github.com/raymond-h/generator-webapp-generic",
-  "bugs": "https://github.com/raymond-h/generator-webapp-generic/issues",
+  "homepage": "https://github.com/raymond-h/generator-webapp-full-mocha",
+  "bugs": "https://github.com/raymond-h/generator-webapp-full-mocha/issues",
   "author": {
     "name": "Raymond Hammarling",
     "email": "",
@@ -17,7 +19,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/raymond-h/generator-webapp-generic.git"
+    "url": "git://github.com/raymond-h/generator-webapp-full-mocha.git"
   },
   "scripts": {
     "test": "grunt test"

@@ -9,7 +9,7 @@ chai.should()
 
 {asyncCatch} = require './common'
 
-describe 'webapp-generic generator', ->
+describe 'webapp-full-mocha generator', ->
 	origCwd = process.cwd()
 	mockParams =
 		webappName: 'spline-destroyer'
@@ -22,7 +22,7 @@ describe 'webapp-generic generator', ->
 			if err
 				return done(err)
 
-			@app = helpers.createGenerator 'webapp-generic:src:app', [
+			@app = helpers.createGenerator 'webapp-full-mocha:src:app', [
 				'../../src/app'
 			]
 
