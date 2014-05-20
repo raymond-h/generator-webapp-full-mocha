@@ -1,6 +1,6 @@
 {
   "name": "generator-webapp-full-mocha",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A generator for Yeoman, with Mocha, Chai + Chai as Promised for server unit, client unit and e2e tests",
   "keywords": [
     "yeoman-generator",
