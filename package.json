@@ -28,7 +28,8 @@
   "dependencies": {
     "yeoman-generator": "~0.13.0",
     "coffee-script": "~1.6.3",
-    "npm": "^1.4.10"
+    "npm": "^1.4.10",
+    "walk": "~2.3.1"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
